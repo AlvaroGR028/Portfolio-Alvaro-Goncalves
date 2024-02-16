@@ -81,7 +81,7 @@ section {
     display: flex;
     align-items: center;
     padding: 0 9%;
-    background: url('/images/noteCell.png') no-repeat;
+    background: url('/imagens/noteCell.png') no-repeat;
     background-size: cover;
     background-position: center;
 }
