@@ -27,10 +27,9 @@ window.onscroll = () => {
             // active sections for animation on scroll 
             sec.classList.add('show-animation');
         }
-        // if want to use animation that repeats on scroll use this
-        else {
-            sec.classList.remove('show-animate');
-        }
+        // else {
+        //     sec.classList.remove('show-animate');
+        // }
     })
 
     // sticky header
@@ -39,7 +38,6 @@ window.onscroll = () => {
     header.classList.toggle('sticky', window.scrollY > 100);
 
     // remove toggle icon and navbar when click navbar links (scroll)
-
 
     // animation footer on scroll
     menuIcon.classList.remove('bx-x');
