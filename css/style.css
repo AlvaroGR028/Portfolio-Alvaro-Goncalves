@@ -87,16 +87,15 @@ section {
     display: flex;
     align-items: center;
     padding: 0 9%;
-    /* background: url('/imagens/noteCell.jpg') no-repeat; */
-    background-image: url('/imagens/noteCell.jpg');
-    background-size: cover;
+    background: url('/imagens/noteCell.jpg') no-repeat;
+    /* background-image: url('/imagens/noteCell.jpg'); */
+    background-size: 100%; /*cover*/
     background-position: center;
 }
 
 .home-content {
-    max-width: 62rem;
+    max-width: 60rem;
     z-index: 99;
-    /* esse aqui era 60 */
 }
 
 .home-content h1 {
