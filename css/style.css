@@ -53,7 +53,7 @@ body {
     font-weight: 600;
 }
 
-.navbar{
+.navbar {
     position: relative;
 }
 
@@ -89,7 +89,7 @@ section {
     padding: 0 9%;
     background: url('/imagens/noteCell.jpg') no-repeat;
     /* background-image: url('/imagens/noteCell.jpg'); */
-    background-size: 100%; /*cover*/
+    background-size: cover;
     background-position: center;
 }
 
@@ -125,6 +125,9 @@ section {
     background-repeat: no-repeat;
     -webkit-background-clip: text;
     background-position: -33rem 0;
+}
+
+.home.show-animate .home-content .text-animate h3 {
     animation: homeBgText 6s linear infinite;
     animation-delay: 2s;
 }
@@ -138,6 +141,10 @@ section {
     height: 100%;
     border-right: 2px solid var(--main-color);
     z-index: -1;
+
+}
+
+.home.show-animate .home-content .text-animate h3::before {
     animation: homeCursorText 6s linear infinite;
     animation-delay: 2s;
 }
@@ -284,6 +291,8 @@ section {
 }
 
 .heading {
+    position: relative;
+    display: inline-block;
     font-size: 5rem;
     margin-bottom: 3rem;
     text-align: center;
@@ -329,10 +338,13 @@ span {
 }
 
 .about-content h3 {
+    position: relative;
+    display: inline-block;
     font-size: 2.6rem;
 }
 
 .about-content p {
+    position: relative;
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
 }
@@ -367,11 +379,14 @@ span {
 }
 
 .education-column .title {
+    position: relative;
+    display: inline-block;
     font-size: 2.5rem;
     margin: 0 0 1.5rem 2rem;
 }
 
 .education-column .education-box {
+    position: relative;
     border-left: .2rem solid var(--main-color);
 }
 
@@ -442,6 +457,12 @@ span {
     background: var(--second-bg-color);
 }
 
+.skills h2 {
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .skills .skills-row {
     display: flex;
     flex-wrap: wrap;
@@ -452,7 +473,13 @@ span {
     flex: 1 1 40rem;
 }
 
+.skills-column .skills-box {
+    position: relative;
+}
+
 .skills-column .title {
+    position: relative;
+    display: inline-block;
     font-size: 2.5rem;
     margin: 0 0 1.5rem;
 }
@@ -550,6 +577,11 @@ span {
     padding-bottom: 7rem;
 }
 
+.contact h2 {
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
 .contact form {
     max-width: 70rem;
     margin: 0 auto;
@@ -581,9 +613,9 @@ span {
     border: .2rem solid var(--main-color);
 }
 
- .contact form .textarea-field textarea {
-    min-height: 350px;
-} 
+.contact form .textarea-field textarea {
+    min-height: 360px;
+}
 
 .contact form .input-box .input-field input::placeholder,
 .contact form .textarea-field textarea::placeholder {
@@ -634,6 +666,11 @@ span {
     background: var(--second-bg-color);
 }
 
+.footer-text,
+.footer-iconTop {
+    position: relative;
+}
+
 .footer-text p {
     font-size: 1.6rem;
 }
@@ -681,17 +718,17 @@ span {
 
 /* animation reload and scroll */
 
-.animate{
-position: absolute;
-top: 0;
-right: 0;
-width: 100%;
-height: 100%;
-background: yellowgreen;
-z-index: 98;
+.animate {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: 98;
 }
 
-.animate.home-img{
+.animate.home-img {
     width: 50%;
 }
 
@@ -701,6 +738,30 @@ z-index: 98;
 .home.show-animate .animate {
     animation: showRight 1s ease forwards;
     animation-delay: calc(.3s * var(--i));
+}
+
+.animate.scroll {
+    transition: 1s ease;
+    transition-delay: calc(.3s / var(--i));
+    animation: none;
+}
+
+section:nth-child(even) .animate.scroll,
+.footer .animate.scroll {
+    background: var(--second-bg-color);
+}
+
+.education .education-box .animate.scroll {
+    width: 105%;
+}
+
+.about.show-animate .animate.scroll,
+.education.show-animate .animate.scroll,
+.skills.show-animate .animate.scroll,
+.contact.show-animate .animate.scroll,
+.footer.show-animate .animate.scroll {
+    transition-delay: calc(.3s * var(--i));
+    width: 0;
 }
 
 /* BREAKPOINTS */
@@ -728,6 +789,12 @@ z-index: 98;
     }
 }
 
+@media (max-width: 850px) {
+    .animate.home-img{
+        width: 55%;
+    }
+}
+
 @media (max-width: 768px) {
     .header {
         background: var(--bg-color);
@@ -751,11 +818,11 @@ z-index: 98;
     }
 
     .navbar.active {
-        left: 0;        
+        left: 0;
         transition-delay: 0s;
     }
 
-    .navbar .active-nav{
+    .navbar .active-nav {
         position: absolute;
         top: 0;
         left: -100%;
@@ -767,8 +834,8 @@ z-index: 98;
         transition: .25s ease;
         transition-delay: 0s;
     }
-    
-    .navbar.active  .active-nav{
+
+    .navbar.active .active-nav {
         transition-delay: .25s;
         left: 0;
     }
@@ -787,9 +854,9 @@ z-index: 98;
         transition-delay: .25s;
     }
 
-    .home-imgHover{
+    .home-imgHover {
         pointer-events: none;
-        background: var(--bg-color);    
+        background: var(--bg-color);
         opacity: .6;
     }
 }
@@ -799,30 +866,33 @@ z-index: 98;
         font-size: 50%;
     }
 
-    .home-content h1{
+    .home-content h1 {
         display: flex;
         flex-direction: column;
     }
 
-    ;.home-sci{
+    ;
+
+    .home-sci {
         width: 160px;
     }
+
     .home-sci a {
         width: 38px;
         height: 38px;
     }
 }
 
-@media (max-width: 462px){
+@media (max-width: 462px) {
     .home-content h1 {
         font-size: 5.2rem;
     }
 
     .education {
-        padding: 10rem 4% 5rem 5%; 
+        padding: 10rem 4% 5rem 5%;
     }
 
-    .contact form .input-box .input-field{
+    .contact form .input-box .input-field {
         width: 100%;
     }
 
@@ -834,9 +904,9 @@ z-index: 98;
         margin-top: 2rem;
         text-align: center;
     }
-} 
+}
 
-@media (max-width: 371px){
+@media (max-width: 371px) {
     .home {
         justify-content: center;
     }
@@ -848,7 +918,7 @@ z-index: 98;
         text-align: center;
     }
 
-    .home-content h1{
+    .home-content h1 {
         font-size: 5rem;
     }
 }
@@ -856,29 +926,31 @@ z-index: 98;
 /* KEYFRAMES ANIMATION */
 
 @keyframes homeBgText {
+
     0%,
     10%,
-    100%{
+    100% {
         background-position: -33rem 0;
     }
-    
+
     65%,
-    85%{
+    85% {
         background-position: 0 0;
     }
 }
 
 
 @keyframes homeCursorText {
+
     0%,
     10%,
-    100%{
+    100% {
         width: 0;
     }
-    
+
     65%,
     78%,
-    85%{
+    85% {
         width: 100%;
         opacity: 1;
     }
@@ -895,8 +967,8 @@ z-index: 98;
     }
 }
 
-@keyframes showRight{
-    100%{
+@keyframes showRight {
+    100% {
         width: 0;
     }
 }
