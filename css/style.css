@@ -94,15 +94,14 @@ section {
 }
 
 .home-content {
-    max-width: 62rem;
+    max-width: 67rem;
     z-index: 99;
 }
 
 .home-content h1 {
     position: relative;
     display: inline-block;
-    font-size: 4.6rem;
-    /* esse aqui era 5.6 */
+    font-size: 4.98rem;
     font-weight: 700;
     line-height: 1.3;
 }
