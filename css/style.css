@@ -412,6 +412,7 @@ span {
     border: .2rem solid var(--main-color);
     border-radius: .6rem;
     margin-bottom: 2rem;
+    text-align: justify;
 }
 
 .education-content .content::before {
