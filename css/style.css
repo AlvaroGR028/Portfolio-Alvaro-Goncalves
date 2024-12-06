@@ -91,33 +91,6 @@ section {
     background: url('/imagens/noteCell.jpg') no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100vh; /* Garantir que a altura ocupe toda a tela */
-
-}
-
-.home-imgHover {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 45%;
-    height: 100%;
-    background: transparent;
-    transition: 3s;
-    z-index: 98; /* Controlar a camada da imagem de hover */
-}
-
-.home-imgHover:hover {
-    background: var(--bg-color);
-    opacity: 0.8;
-}
-.home-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Um filtro escuro para destacar o conteúdo */
-    z-index: 98;
 }
 
 .home-content {
@@ -296,7 +269,7 @@ section {
     width: 45%;
     height: 100%;
     background: transparent;
-    transition: 3s;
+    transition: 1s;
 }
 
 .home-imgHover:hover {
@@ -782,9 +755,7 @@ span {
     z-index: 98;
 }
 
-.animate.home-img {
-    width: 50%;
-}
+
 
 .logo .animate,
 .navbar .animate,
