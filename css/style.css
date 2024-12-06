@@ -16,6 +16,7 @@
     --second-bg-color: #112e42;
     --text-color: #ededed;
     --main-color: #6152C0;
+    /* --main-color: #F1C911; */
 }
 
 html {
@@ -90,6 +91,33 @@ section {
     background: url('/imagens/noteCell.jpg') no-repeat;
     background-size: cover;
     background-position: center;
+    height: 100vh; /* Garantir que a altura ocupe toda a tela */
+
+}
+
+.home-imgHover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+    z-index: 98; /* Controlar a camada da imagem de hover */
+}
+
+.home-imgHover:hover {
+    background: var(--bg-color);
+    opacity: 0.8;
+}
+.home-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Um filtro escuro para destacar o conteúdo */
+    z-index: 98;
 }
 
 .home-content {
@@ -539,27 +567,31 @@ span {
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
-    width: 78%;
+    width: 52%;
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
-    width: 48%;
+    width: 88%;
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
-    width: 38%;
+    width: 73%;
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
-    width: 59%;
+    width: 57%;
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(5) .bar span {
-    width: 27%;
+    width: 28%;
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(6) .bar span {
-    width: 62%;
+    width: 59%;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(7) .bar span {
+    width: 82%;
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
