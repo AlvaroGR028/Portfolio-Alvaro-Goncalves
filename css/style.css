@@ -452,6 +452,8 @@ span {
 
 /* Habilidades*/
 
+/* Habilidades */
+
 .skills {
     min-height: auto;
     padding-bottom: 7rem;
@@ -539,61 +541,68 @@ span {
     background: var(--main-color);
 }
 
+/* HARD SKILLS */
 .skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
-    width: 52%;
+    width: 88%; /* Excel */
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
-    width: 88%;
+    width: 75%; /* Power BI */
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
-    width: 73%;
+    width: 35%; /* SQL */
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
-    width: 57%;
+    width: 60%; /* Análise de Dados */
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(5) .bar span {
-    width: 28%;
+    width: 65%; /* Documentação */
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(6) .bar span {
-    width: 59%;
+    width: 70%; /* HTML & CSS */
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(7) .bar span {
-    width: 82%;
+    width: 68%; /* JavaScript */
 }
 
+.skills-column:nth-child(1) .skills-content .progress:nth-child(8) .bar span {
+    width: 72%; /* C# / ASP.NET */
+}
+
+/* SOFT SKILLS */
 .skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
-    width: 92%;
+    width: 92%; /* Atenção a detalhes */
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
-    width: 84%;
+    width: 90%; /* Organização */
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
-    width: 73%;
+    width: 70%; /* Pensamento analítico */
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
-    width: 62%;
+    width: 68%; /* Comunicação corporativa */
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(5) .bar span {
-    width: 86%;
+    width: 88%; /* Facilidade de aprendizado */
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(6) .bar span {
-    width: 74%;
+    width: 90%; /* Trabalho em equipe */
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(7) .bar span {
-    width: 88%;
+    width: 92%; /* Responsabilidade */
 }
+
 
 /* Contato */
 
